@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Sidebar from './Sidebar';
-import Tweets from './Pages/Tweets';
-import MyPage from './Pages/MyPage';
-import About from './Pages/About';
+import Tweets from './pages/Tweets';
+import MyPage from './pages/MyPage';
+import About from './pages/About';
 import './App.css';
 
 const App = () => {

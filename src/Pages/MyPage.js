@@ -1,8 +1,9 @@
 import React from 'react';
-import Footer from '../Footer';
-import Tweet from '../Components/Tweet';
-import './MyPage.css';
-import dummyTweets from '../static/dummyData';
+import Footer from '../Footer'; 
+import Tweet from '../components/Tweet'; 
+import './MyPage.css'; 
+import dummyTweets from '../static/dummyData'; 
+
 
 const MyPage = () => {
   const filteredTweets = dummyTweets.filter(tweet => tweet.username === 'Bob');

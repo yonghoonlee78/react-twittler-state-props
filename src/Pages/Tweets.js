@@ -1,28 +1,33 @@
 import React, { useState } from 'react';
-import Footer from '../Footer';
-import Tweet from '../Components/Tweet';
-import './Tweets.css';
-import dummyTweets from '../static/dummyData';
+import Footer from '../Footer'; 
+import Tweet from '../components/Tweet'; 
+
+import './Tweets.css'; 
+import dummyTweets from '../static/dummyData'; 
 
 const Tweets = () => {
   const [tweets, setTweets] = useState(dummyTweets);
-  const [username, setUsername] = useState('Bob');
+  const [username, setUsername] = useState('Bob'); 
   const [message, setMessage] = useState('');
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!message.trim()) return;
+    e.preventDefault(); 
+    if (!message.trim()) return; 
 
     const newTweet = {
-      id: Date.now(),
+      id: Date.now(), 
       username,
       content: message,
-      createdAt: new Date().toISOString(),
-      picture: "https://randomuser.me/api/portraits/men/98.jpg"
+      createdAt: new Date().toLocaleDateString('ko-KR', {
+        year: 'numeric',
+        month: 'numeric',
+        day: 'numeric'
+      }).replace(/\s/g, ''), 
+      picture: "https://randomuser.me/api/portraits/men/98.jpg" 
     };
 
-    setTweets([newTweet, ...tweets]);
-    setMessage('');
+    setTweets([newTweet, ...tweets]); 
+    setMessage(''); 
   };
 
   return (
@@ -33,7 +38,7 @@ const Tweets = () => {
             <img src="https://randomuser.me/api/portraits/men/98.jpg" alt="profile" />
           </div>
           <div className="tweetForm__inputContainer">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}> 
               <div className="tweetForm__inputWrapper">
                 <div className="tweetForm__input">
                   <input
@@ -63,6 +68,7 @@ const Tweets = () => {
                 <button
                   type="submit"
                   className="tweetForm__submitButton"
+                  onClick={handleSubmit}
                 >
                   Tweet
                 </button>
