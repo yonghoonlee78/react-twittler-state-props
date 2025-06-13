@@ -1,31 +1,30 @@
+
 import React from 'react';
-import './Tweet.css';
+import './Tweet.css'; 
 
-const Tweet = ({ tweet }) => {
-  const dateObj = new Date(tweet.createdAt);
+function Tweet({ user, content, date, createdAt }) { 
 
- 
-  const year = dateObj.getFullYear();
-  const month = dateObj.getMonth() + 1; 
-  const day = dateObj.getDate();
-
- 
-  const parsedDate = `${year}. ${month}. ${day}.`; 
+  if (!user || !user.name || !content || !date || !createdAt) {
+      console.error("Tweet component received incomplete or invalid props:", { user, content, date, createdAt });
+      return null;
+  }
 
   return (
-    <li className="tweet" id={tweet.id}>
-      <div className="tweet__profile">
-        <img src={tweet.picture} alt={`${tweet.username}의 프로필 사진`} />
+    <div className="tweet">
+      <div className="tweet__avatar-container">
+        {user.profilePic && <img src={user.profilePic} alt={user.name} className="tweet__profile-pic" />}
       </div>
-      <div className="tweet__content">
-        <div className="tweet__userInfo">
-          <span className="tweet__username">{tweet.username}</span>
-          <span className="tweet__createdAt">{parsedDate}</span> 
+      <div className="tweet__main-content">
+        <div className="tweet__info">
+          <span className="tweet__username">{user.name}</span>
+          <span className="tweet__timestamp">{date}</span>
         </div>
-        <div className="tweet__message">{tweet.content}</div>
+        <div className="tweet__body">
+          <p>{content}</p>
+        </div>
       </div>
-    </li>
+    </div>
   );
-};
+}
 
 export default Tweet;

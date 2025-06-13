@@ -2,8 +2,9 @@ import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
 import TestRenderer from 'react-test-renderer';
 
-import Footer from '../Footer';
-import About from '../Pages/About';
+import Footer from 'scr/Footer';
+import About from 'scr/About'; 
+import './About.css';
 
 const aboutTest = {
   main() {

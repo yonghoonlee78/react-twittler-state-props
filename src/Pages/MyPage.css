@@ -1,43 +1,52 @@
-.myInfo {
+.my-page {
   display: flex;
   flex-direction: column;
-  flex: 1 0 0;
+  padding: 20px;
+  background-color: #ffffff;
+  
 }
 
-.myInfo__container {
-  border-bottom: 1px solid var(--main-border-color);
-  margin-bottom: 0.5rem;
-}
-
-.myInfo__wrapper {
-  padding-left: 15px;
-  height: 97px;
+.profile-header {
+  background-color: #f0f0f0; 
+  padding: 20px;
+  border-radius: 8px;
   display: flex;
-  align-items: center;
-  color:white;
-  background-color: var(--mypage-component-color);
+  align-items: center; 
+  margin-bottom: 20px;
+  gap: 20px; 
+  width: fit-content;
 }
 
-.myInfo__detail {
-  padding-left: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.myInfo__detail > .myInfo__detailName {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.myInfo__profile > img {
-  display: inline-block;
+.profile-pic {
   width: 80px;
   height: 80px;
-  border-radius: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  
 }
 
-.tweets__mypage{
-  flex: 1 0 80vh;
-  border: 2px solid var(--mypage-component-color);
-  overflow-y: scroll;
+.profile-info {
+  display: flex; 
+  flex-direction: column; 
+  flex-grow: 1; 
+}
+
+.profile-info h1 {
+  color: #000000; 
+  font-size: 24px;
+  margin: 0; 
+  white-space: nowrap; 
+}
+
+.profile-info p {
+  color: #000000; 
+  font-size: 16px;
+  margin: 5px 0 0; 
+  white-space: nowrap; 
+}
+
+
+.profile-tweets-section {
+  margin-top: 20px;
+  /* 기타 스타일 */
 }

@@ -1,94 +1,32 @@
-* {
-  box-sizing: border-box;
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-}
-
-:root {
-  --main-border-color: rgb(235, 238, 240);
-  --point-color: rgb(64, 0, 199);
-  --point-color-tint: rgb(159, 127, 227);
-  --default-text-color: rgb(0, 0, 0);
-  --sub-text-color: rgb(91, 112, 131);
-  --bold-text-color: rgb(15, 20, 25);
-  --button-text-color: rgb(255, 255, 255);
-  --button-color: rgb(25, 71, 140);
-  --shade-color: rgb(229, 229, 229);
-  --mypage-component-color: #eb9705;
-  --about-component-color: #097e4d;
-  --tweets-component-color: #003380;
-}
+/* src/App.css */
 
 body {
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
-  border: 0;
-}
-
-button,
-input {
-  overflow: visible; /* 1 */
-}
-
-button {
-  background-color: var(--button-color);
-  color: var(--button-text-color);
-}
-
-textarea {
-  overflow: auto;
-  resize: none;
-}
-
-.App {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-
-footer {
-  flex: 0 0 1rem;
-  padding: 0.3rem;
-  text-align: right;
-}
-
-main {
-  display: flex;
-  flex-direction: row;
-  max-width: 640px;
-  flex: 1 0 0;
+.app-container {
+  display: flex; 
+  min-height: 100vh; 
+  background-color: #f9f9f9; 
 }
 
 .sidebar {
-  display: flex;
-  flex-direction: column;
+  
+  width: 150px; 
+  
+  background-color: #ffffff; 
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 
-.far,
-.fas {
-  font-size: 2rem;
-  color: var(--default-text-color);
-  padding: 1.3rem;
-  cursor: pointer;
+.main-content {
+  flex-grow: 1; 
+  padding: 20px; 
+  overflow-y: auto; 
 }
 
-.features {
-  width: 564px;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid var(--main-border-color);
-  flex: 1 0 0;
-}

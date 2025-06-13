@@ -19,9 +19,9 @@
     ]
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts --openssl-legacy-provider build",
-    "test": "react-scripts test",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test", 
     "eject": "react-scripts eject"
   },
   "browserslist": {
@@ -37,6 +37,7 @@
     ]
   },
   "devDependencies": {
-    "resq": "^1.10.0"
+    "resq": "^1.10.0",
+    "react-scripts": "^5.0.1"
   }
 }

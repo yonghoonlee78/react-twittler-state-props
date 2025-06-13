@@ -1,72 +1,50 @@
 .tweet {
-  display: flex;
-  list-style: none;
-  padding: 0.5rem 1rem;
-  border-bottom: 1px solid var(--main-border-color);
+  display: flex; 
+  padding: 15px;
+  border: 1px solid #e0e0e0; 
+  border-radius: 8px; 
+  background-color: #ffffff; 
+  margin-bottom: 10px; 
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); 
 }
 
-.tweet:hover {
-  background-color: var(--shade-color);
+.tweet__avatar-container {
+  margin-right: 15px; 
 }
 
-.tweet__profile {
-  padding: 0.2rem;
+.tweet__profile-pic {
+  width: 50px; 
+  height: 50px;
+  border-radius: 50%; 
+  object-fit: cover; 
 }
 
-.tweet__profile > img {
-  display: inline-block;
-  width: 50px;
-  border-radius: 100%;
+.tweet__main-content {
+  flex-grow: 1; 
 }
 
-.tweet__content {
-  flex: 1 0 0;
+.tweet__info {
+  display: flex; 
+  align-items: baseline; 
+  margin-bottom: 5px; 
 }
 
-.tweet__userInfo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.tweet__username {
+  font-weight: bold;
+  margin-right: 8px; 
+  color: #000000; 
+  font-size: 1.1em; 
 }
 
-.tweet__userInfo--wrapper > .tweet__username {
-  display: inline-block;
-  color: var(--bold-text-color);
-  font-weight: 700;
-  margin-left: 0.5rem;
+.tweet__timestamp {
+  color: #666666; 
+  font-size: 0.9em; 
 }
 
-.tweet__userInfo--wrapper > .tweet__createdAt {
-  display: inline-block;
-  color: var(--sub-text-color);
-  margin-left: 0.5rem;
-}
-
-.tweet__userInfo--buttonWrapper > .tweet__deleteButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--button-color);
-  margin-left: 0.5rem;
-  padding: 0.2rem;
-  border-radius: 50px;
-}
-
-.tweet__userInfo--buttonWrapper > .tweet__deleteButton > .far {
-  color: var(--button-text-color);
-  background-color: var(--button-color);
-  font-size: 0.8rem;
-  padding: 0.1rem;
-  border-radius: 50px;
-}
-
-.tweet__userInfo--buttonWrapper > button:hover, 
-.tweet__userInfo--buttonWrapper > button:focus {
-  outline: none;
-  box-shadow: 0 0 3px var(--button-color);
-  background: var(--tweets-component-color);
-}
-
-.tweet__message {
-  padding: 0.5rem;
+.tweet__body p {
+  margin: 0; 
+  color: #000000; 
+  line-height: 1.5; 
+  word-wrap: break-word; 
+  white-space: pre-wrap;
 }
